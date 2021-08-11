@@ -5,14 +5,15 @@ def intfunction():
     temp = input('Enter the integer to be iterated ')
     length = len(temp)
 
-    print('you entered ', temp + 'length : ', length)
+    print('you entered ', temp + 'length : ',  length)
 
     total_sum = 0
 
-    print('the length of the number entered is ', length)
+    #print('the length of the number entered is ', length)
 
     for i in range(length):
         total_sum += int(temp[i])
+        #given each char and iterating throught the entered input
 
     print('The sum of the input number digits is ', total_sum)
 
@@ -20,18 +21,27 @@ def intfunction():
 def hexfunction():
     string_hexnum = raw_input('Enter the Hexadecimal number : ')
     print('you entered : ', string_hexnum)
+#for i in string_hexnum :
+    #int_hexnum = int(string_hexnum,16)
+     # taking an empty list to add the integer values of each hex decimal converted values in the given input
+    char = []
+    for i in string_hexnum:
+        char.append(int(i,16))
+        
+       #converting the each character in the given input to hex decimal value
+       #adding the integer value to the list
 
-    int_hexnum = int(string_hexnum,16)
+    #print('The integer value of the entered Hexadecimal is', int_hexnum)
 
-    print('The integer value of the entered Hexadecimal is', int_hexnum)
+    #int_hexnum_tostring = str(int_hexnum)
+    #print (int_hexnum_tostring)
 
-    int_hexnum_tostring = str(int_hexnum)
-
-    length = len(int_hexnum_tostring)
+    length = len(char)
     total_sum = 0;
 
     for i in range(length):
-        total_sum += int(int_hexnum_tostring[i])
+        #taking the sum of induvudual value
+        total_sum += int(char[i])
 
     print('The sum of the input number digits is ', total_sum)
 
@@ -47,4 +57,3 @@ if(type_of == 1):
 
 elif(type_of == 2):
     hexfunction()
-
